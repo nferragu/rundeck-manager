@@ -44,7 +44,7 @@ Exemples :
 
 ```
 # basic usages
-# extraction des projets
+# Projects extracts
 ```
 rd-mgr.py --config <hostname.json> --save all --dir <dir> --branch <hostname>
 ```
