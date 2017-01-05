@@ -45,10 +45,14 @@ Exemples :
 ```
 # basic usages
 # extraction des projets
+```
 rd-mgr.py --config <hostname.json> --save all --dir <dir> --branch <hostname>
+```
 
 # lets push on another server
+```
 rd-mgr.py --register --config <hostname.json> --register <dir>/*.json
+```
 
 # hostname.json format
 ```
