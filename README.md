@@ -2,6 +2,7 @@
 Tool to manage projects from one to another Rundeck server (export and import json definitions).
 
 # inline help
+```
 usage: rd-mgr.py [-h] [--config CONFIG] [--username USERNAME]
                  [--password PASSWORD] [--server SERVER] [--port PORT]
                  [--ssl SSL] [--key KEY] [--api API]
@@ -41,7 +42,7 @@ Exemples :
             ./rd-mgr.py --config newprop.json --delete --confirm
             ./rd-mgr.py --save all --dir t
 
-
+```
 # basic usages
 # extraction des projets
 rd-mgr.py --config <hostname.json> --save all --dir <dir> --branch <hostname>
@@ -50,6 +51,7 @@ rd-mgr.py --config <hostname.json> --save all --dir <dir> --branch <hostname>
 rd-mgr.py --register --config <hostname.json> --register <dir>/*.json
 
 # hostname.json format
+```
 {
         "RUNDECKSERVER": "rundeck.fqdn.com",
         "PORT": 4443,
@@ -58,3 +60,4 @@ rd-mgr.py --register --config <hostname.json> --register <dir>/*.json
         "API_VERSION": "15",
         "VERBOSE": false
 }
+```
