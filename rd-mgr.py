@@ -250,14 +250,14 @@ if __name__ == "__main__":
             ./rd-mgr.py --config newprop.json --register t/*.json
             ./rd-mgr.py --config newprop.json --delete --confirm
             ./rd-mgr.py --save all --dir t'''))
-        parser.add_argument('--config', dest="config", help="Fichier de configuration. Les options prevallent.")
+        parser.add_argument('--config', dest="config", help="Configuration file. Options overrides it.")
         parser.add_argument('--username', dest="username", help="Account Username for Rundeck Login")
         parser.add_argument('--password', dest="password", help="Account Password for Rundeck Login")
-        parser.add_argument('--server', dest="server", help="adresse du serveur Rundeck")
-        parser.add_argument('--port', dest="port", help="port du serveyr Rundeck")
-        parser.add_argument('--ssl', dest="ssl", help="port en https ?")
-        parser.add_argument('--key', dest="key", help="API key")
-        parser.add_argument('--api', dest="api", help="API version")
+        parser.add_argument('--server', dest="server", help="Rundeck server address")
+        parser.add_argument('--port', dest="port", help="Rundeck server port")
+        parser.add_argument('--ssl', dest="ssl", help="Rundeck server is in https ?")
+        parser.add_argument('--key', dest="key", help="API token key")
+        parser.add_argument('--api', dest="api", help="API version to deal with")
         parser.add_argument('--register', dest="register", nargs="*", help="Register config file")
         parser.add_argument('--save', dest="save", nargs="*", help="Get config projects A B C.. Keyword all for all.")
         parser.add_argument('--branch', dest="branch", help="Override branch on save")
@@ -265,8 +265,8 @@ if __name__ == "__main__":
         parser.add_argument('--dir', dest="directory", help="Destination directory for saved files")
         parser.add_argument('--list', dest="list", action='count', help="List projects")
         parser.add_argument('--delete', dest="delete", nargs="*", help="Delete projects A B C.. Keyword all for all.")
-        parser.add_argument('--confirm', dest="confirm", action='count', help="Yes I really do want to do it.")
-        parser.add_argument('-v', dest="verbose", action='count', help="mode verbeux")
+        parser.add_argument('--confirm', dest="confirm", action='count', help="Yes I really do want to del it.")
+        parser.add_argument('-v', dest="verbose", action='count', help="verbose mode")
 
 
         options = parser.parse_args()
