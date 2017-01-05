@@ -1,0 +1,12 @@
+{
+        "RUNDECKSERVER": "rundeck.canaltp.prod",
+        "PORT": 4440,
+        "SSL": false,
+        "API_KEY": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxyyy",
+        "API_VERSION": "15",
+        "PAGE_SIZE": 100,
+        "MAXIMUM_DAYS": 30,
+        "TIMEOUT": 100,
+        "DELETE_TIMEOUT": 2200,
+        "VERBOSE": false
+}
