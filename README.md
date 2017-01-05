@@ -4,8 +4,8 @@ Tool to manage projects from one to another Rundeck server (export and import js
 # inline help
 ```
 usage: rd-mgr.py [-h] [--config CONFIG] [--username USERNAME]
-                 [--password PASSWORD] [--server SERVER] [--port PORT]
-                 [--ssl SSL] [--key KEY] [--api API]
+                 [--password PASSWORD] [--server SERVER] [--port PORT] [--ssl]
+                 [--key KEY] [--api API]
                  [--register [REGISTER [REGISTER ...]]]
                  [--save [SAVE [SAVE ...]]] [--branch BRANCH]
                  [--scmkeystore SCMKEYSTORE] [--dir DIRECTORY] [--list]
@@ -20,7 +20,7 @@ optional arguments:
   --password PASSWORD   Account Password for Rundeck Login
   --server SERVER       Rundeck server address
   --port PORT           Rundeck server port
-  --ssl SSL             Rundeck server is in https ?
+  --ssl                 set it if Rundeck server is in https
   --key KEY             API token key
   --api API             API version to deal with
   --register [REGISTER [REGISTER ...]]
