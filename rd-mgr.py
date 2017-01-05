@@ -271,14 +271,6 @@ if __name__ == "__main__":
 
         options = parser.parse_args()
 
-        # si on est sous rundeck,
-        if os.getenv('RD_NODE_HOSTNAME'):
-            options.ip = os.getenv('RD_NODE_HOSTNAME')
-        if os.getenv('RD_NODE_USERNAME'):
-            options.userName = os.getenv('RD_NODE_USERNAME')
-            #Todo get password with API key
-            #options.password = open("/var/lib/rundeck/var/storage/content/keys/users/" + options.userName).read()
-
         # si fichier de config specifie
         if options.config:
             setting_filename = options.config
@@ -290,7 +282,7 @@ if __name__ == "__main__":
             with open(setting_filename, 'r') as props_file:
                 PROPERTIES = json.load(props_file)
         except:
-            print ("Erreur : pas de fichier de configuration")
+            print ("Error : no configuration file found")
             exit(1)
 
         # Override with options
