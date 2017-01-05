@@ -255,7 +255,7 @@ if __name__ == "__main__":
         parser.add_argument('--password', dest="password", help="Account Password for Rundeck Login")
         parser.add_argument('--server', dest="server", help="Rundeck server address")
         parser.add_argument('--port', dest="port", help="Rundeck server port")
-        parser.add_argument('--ssl', dest="ssl", help="Rundeck server is in https ?")
+        parser.add_argument('--ssl', dest="ssl", action='count', help="set it if Rundeck server is in https")
         parser.add_argument('--key', dest="key", help="API token key")
         parser.add_argument('--api', dest="api", help="API version to deal with")
         parser.add_argument('--register', dest="register", nargs="*", help="Register config file")
@@ -293,7 +293,7 @@ if __name__ == "__main__":
             PROPERTIES['RUNDECKSERVER']=options.server
         if options.port:
             PROPERTIES['PORT']=options.port
-        if options.ssl:
+        if options.ssl>0:
             PROPERTIES['SSL']=True
         if options.key:
             PROPERTIES['API_KEY']=options.key
